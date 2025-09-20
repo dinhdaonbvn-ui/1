@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: futures-signal-app
+    env: docker
+    plan: free
+    autoDeploy: true
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PORT
+        value: "10000"
+      - key: SYMBOL
+        value: "SOL/USDT"
+      - key: EXCHANGE
+        value: "binance"
